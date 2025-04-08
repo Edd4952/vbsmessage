@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>secret message</title>
+    <script>
+        // This script runs when the page loads
+        window.onload = function() {
+            // Define arrays
+            var mainArray = new Array(27);
+
+            var subArraya = [" .d8b.  ", "d8' `8b ", "88ooo88 ", "88~~~88 ", "88   88 ", "YP   YP "];
+            var subArrayb = ["d8888b. ", "88  `8D ", "88oooY' ", "88~~~b. ", "88   8D ", "Y8888P' "];
+            var subArrayc = [" .o88b. ", "d8P  Y8 ", "8P      ", "8b      ", "Y8b  d8 ", " `Y88P' "];
+            var subArrayd = ["d8888b. ", "88  `8D ", "88   88 ", "88   88 ", "88  .8D ", "Y8888D' "];
+            var subArraye = ["d88888b ", "88'     ", "88ooooo ", "88~~~~~ ", "88.     ", "Y88888P "];
+            var subArrayf = ["d88888b ", "88'     ", "88ooo   ", "88~~~   ", "88      ", "YP      "];
+            var subArrayg = [" d888b  ", "88' Y8b ", "88      ", "88  ooo ", "88. ~8~ ", " Y888P  "];
+            var subArrayh = ["db   db ", "88   88 ", "88ooo88 ", "88~~~88 ", "88   88 ", "YP   YP "];
+            var subArrayi = ["d888888b ", "  `88'   ", "   88    ", "   88    ", "  .88.   ", "Y888888P "];
+            var subArrayj = ["   d88b ", "   `8P' ", "    88  ", "    88  ", "db. 88  ", "Y8888P  "];
+            var subArrayk = ["db   dD ", "88 ,8P' ", "88,8P   ", "88`8b   ", "88 `88. ", "YP   YD "];
+            var subArrayl = ["db      ", "88      ", "88      ", "88      ", "88booo. ", "Y88888P "];
+            var subArraym = [".88b  d88. ", "88'YbdP`88 ", "88  88  88 ", "88  88  88 ", "88  88  88 ", "YP  YP  YP "];
+            var subArrayn = ["d8b   db ", "888o  88 ", "88V8o 88 ", "88 V8o88 ", "88  V888 ", "VP   V8P "];
+            var subArrayo = [" .d88b.  ", ".8P  Y8. ", "88    88 ", "88    88 ", "`8b  d8' ", " `Y88P'  "];
+            var subArrayp = ["d8888b. ", "88  `8D ", "88oodD' ", "88~~~   ", "88      ", "88      "];
+            var subArrayq = [" .d88b.  ", ".8P  Y8. ", "88    88 ", "88    88 ", "`8P  d8' ", " `Y88'Y8 "];
+            var subArrayr = ["d8888b. ", "88  `8D ", "88oobY' ", "88`8b   ", "88 `88. ", "88   YD "];
+            var subArrays = [".d8888. ", "88'  YP ", "`8bo.   ", "  `Y8b. ", "db   8D ", "`8888Y' "];
+            var subArrayt = ["d888888b ", "`~~88~~' ", "   88    ", "   88    ", "   88    ", "   YP    "];
+            var subArrayu = ["db    db ", "88    88 ", "88    88 ", "88    88 ", "88b  d88 ", "~Y8888P' "];
+            var subArrayv = ["db    db ", "88    88 ", "Y8    8P ", "`8b  d8' ", " `8bd8'  ", "   YP    "];
+            var subArrayw = ["db   d8b   db ", "88   I8I   88 ", "88   I8I   88 ", "Y8   I8I   88 ", "`8b d8'8b d8' ", " `8b8' `8d8'  "];
+            var subArrayx = ["db    db ", "`8b  d8' ", " `8bd8'  ", " .dPYb.  ", ".8P  Y8. ", "YP    YP "];
+            var subArrayy = ["db    db ", "`8b  d8' ", " `8bd8'  ", "   88    ", "   88    ", "   YP    "];
+            var subArrayz = ["d88888D ", "YP  d8' ", "   d8'  ", "  d8'   ", " d8' db ", "d88888P "];
+            var subArraySpace = ["   ", "   ", "   ", "   ", "   ", "   "];
+
+            // Populate the main array with subarrays
+            mainArray[0] = subArraySpace;
+            mainArray[1] = subArraya;
+            mainArray[2] = subArrayb;
+            mainArray[3] = subArrayc;
+            mainArray[4] = subArrayd;
+            mainArray[5] = subArraye;
+            mainArray[6] = subArrayf;
+            mainArray[7] = subArrayg;
+            mainArray[8] = subArrayh;
+            mainArray[9] = subArrayi;
+            mainArray[10] = subArrayj;
+            mainArray[11] = subArrayk;
+            mainArray[12] = subArrayl;
+            mainArray[13] = subArraym;
+            mainArray[14] = subArrayn;
+            mainArray[15] = subArrayo;
+            mainArray[16] = subArrayp;
+            mainArray[17] = subArrayq;
+            mainArray[18] = subArrayr;
+            mainArray[19] = subArrays;
+            mainArray[20] = subArrayt;
+            mainArray[21] = subArrayu;
+            mainArray[22] = subArrayv;
+            mainArray[23] = subArrayw;
+            mainArray[24] = subArrayx;
+            mainArray[25] = subArrayy;
+            mainArray[26] = subArrayz;
+
+            // Define the key array
+            var key = [8, 5, 12, 12, 15, 0, 23, 15, 18, 12, 4];
+
+            // Initialize empty strings
+            var str1 = "";
+            var str2 = "";
+            var str3 = "";
+            var str4 = "";
+            var str5 = "";
+            var str6 = "";
+
+            // Loop through arrays and add the elements
+            for (var i = 0; i < key.length; i++) {
+                str1 += mainArray[key[i]][0];
+                str2 += mainArray[key[i]][1];
+                str3 += mainArray[key[i]][2];
+                str4 += mainArray[key[i]][3];
+                str5 += mainArray[key[i]][4];
+                str6 += mainArray[key[i]][5];
+            }
+            // Create message
+            var message = str1 + "\n" + str2 + "\n" + str3 + "\n" + str4 + "\n" + str5 + "\n" + str6;
+
+            // Display the message in a preformatted block
+            document.getElementById("output").innerText = message;
+        };
+    </script>
+</head>
+<body>
+    <div id="output" style="font-family: 'Courier New', monospace; white-space: pre; font-weight: bold;"></div>
+    <button onclick="window.close()">Bet</button>
+</body>
+</html>
